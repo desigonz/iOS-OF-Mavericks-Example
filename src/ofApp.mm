@@ -6,7 +6,7 @@ ofPoint lastTouch;
 //--------------------------------------------------------------
 void ofApp::setup(){
     lastTouch.set(0,0);
-    ofBackground(74, 81, 120);
+    ofBackground(74, 81, 140);
 }
 
 //--------------------------------------------------------------
@@ -18,7 +18,7 @@ void ofApp::update(){
 void ofApp::draw(){
     ofEnableAlphaBlending();
     if(lastTouch.x!=0 && lastTouch.y!=0){
-        ofSetColor(114,176,140);
+        ofSetColor(lastTouch.x/2,lastTouch.y/3,140);
         ofFill();
         ofCircle(lastTouch.x,lastTouch.y, 30);
     }
